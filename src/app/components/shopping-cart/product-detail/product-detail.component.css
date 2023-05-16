@@ -1,0 +1,39 @@
+.container-spans{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px black inset;
+    background-color: #D3C89090;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+.container-spans span{
+    flex: 0 0 19%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color: #000000;
+}
+.container-spans span:first-child {
+    flex: 0 0 5%;
+}
+.container-buttons{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.button{
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #50A9AD90;
+}
+.button:hover {
+    background-color: #FBDFAAFF;
+    border-color: #ffffff90;
+    transition: all;
+    transition-duration: 500ms;
+}

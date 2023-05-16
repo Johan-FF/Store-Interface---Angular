@@ -1,0 +1,27 @@
+<div class="container-buttons">
+    <button class="button" (click)="triggerCustomEvent_2()">
+        <i class="fa fa-trash"></i>
+    </button>
+    <button class="button" (click)="update_amount(-1)">-</button>
+    <button class="button" (click)="update_amount(1)">+</button>
+</div>
+<li class="container-spans">
+    <span>
+        {{product.amount}}
+    </span>
+    <span>
+        {{product.title}}
+    </span>
+    <span>
+        {{product.category}}
+    </span>
+    <span>
+        {{product.discount_percentage}}
+    </span>
+    <span>
+        {{product.price}}$
+    </span>
+    <span>
+        {{product.total}}$
+    </span> 
+</li>

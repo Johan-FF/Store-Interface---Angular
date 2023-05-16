@@ -1,0 +1,40 @@
+<button class="button-shopping-cart" (click)="set_show_cart()" *ngIf="!show_cart">
+    <i class="fa fa-shopping-cart"></i>
+</button>
+<button class="button-close" (click)="set_show_cart()" *ngIf="show_cart">
+    <i class="fas fa-times"></i>
+</button>
+<main class="shopping-cart" *ngIf="show_cart">
+    <section class="container-shopping">
+        <header class="header">
+            <div class="header-fond">
+                <div class="header-drop_1"></div>
+                <div class="header-drop_2"></div>
+            </div>
+            <h1 class="header-title">Shopping Cart</h1>
+        </header>
+        <body class="container-body">
+            <section class="container-products">
+                <ul>
+                    <li class="container-spans">
+                        <span><strong></strong></span>
+                        <span><strong>Title</strong></span>
+                        <span><strong>Category</strong></span>
+                        <span><strong>Discount  Percentage</strong></span>
+                        <span><strong>Price</strong></span> 
+                        <span><strong>Total</strong></span> 
+                    </li>
+                    <ng-container *ngFor="let product of products">
+                        <app-product-detail class="container-product" (customEvent_2)="delete_product_by_id($event)" (customEvent_1)="update_total_price()" [product]="product">
+                        </app-product-detail>
+                    </ng-container>
+                </ul>
+            </section>
+            <section class="container-buttons">
+                <button class="button" (click)="delete_all_products()">Empty</button>
+                <button class="button">Buy</button>
+                <span><strong>Total: </strong>{{total_price}}</span>
+            </section>
+        </body>
+    </section>
+</main>

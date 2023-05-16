@@ -1,0 +1,108 @@
+.product{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 5px -5px 35px 15px #00000050 inset;
+    border-bottom: 1px solid #000000AA;
+    border-left: 2px solid #000000AA;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.product:hover{
+    background-color: #537188;
+    transition: all;
+    transition-duration: 500ms;
+}
+.container-img{
+    flex: 0 0 30%;
+}
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+    border-left: 2px solid #ccc;
+    border-radius: 20px;
+}
+.container-details {
+    flex: 0 0 70%;
+    padding-left: 20px;
+    position: relative;
+}
+.container-details .description {
+    overflow-wrap: break-word;
+}
+.title-tertiary, .title-secondary, .title-primary {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.title-primary{
+    color: #1B9C85;
+}
+.title-secondary{
+    color: #4C4C6D;
+}
+.title-tertiary{
+    color: #643843;
+}
+.description {
+    width: 80%;
+    margin-bottom: 10px;
+}
+.stock-1, .stock-2, .price-1, .price-2 {
+    margin-right: 10px;
+    position: absolute;
+    bottom: 15%;
+}
+.stock-1{
+    font-weight: bold;
+}
+.stock-2{
+    left: 15%;
+}
+.price-1{
+    font-weight: bold;
+    left: 30%;
+}
+.price-2{
+    left: 40%;
+}
+.container-buy{
+    height: 90%;
+    width: 10%;
+    position: absolute;
+    right: 5px;
+    display: grid;
+    font-size: 20px;
+}
+.buttons-buy, .buttons-add, .detail-buy{
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.buttons-buy, .buttons-add{
+    cursor: pointer;
+    background-color: #10A9AD90;
+}
+.buttons-buy:hover, .buttons-add:hover {
+    background-color: #DBDFAAFF;
+    border-color: #ffffff90;
+    transition: all;
+    transition-duration: 500ms;
+}
+.buttons-add{
+    font-size: 20px;
+}
+.detail-buy{
+    font-size: 40px;
+}

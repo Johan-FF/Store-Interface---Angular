@@ -1,0 +1,47 @@
+<main class="container-main">
+    <body class="container-details">
+        <header class="header">
+            <div class="header-fond">
+                <div class="header-drop_1"></div>
+                <div class="header-drop_2"></div>
+            </div>
+            <h1 class="header-title">{{product.title}}</h1>
+        </header>
+        <p class="detail-description">{{product.description}}</p>
+        <div class="container-spans">
+            <span>
+                <strong>Price: </strong><br>
+                {{product.price}}$
+            </span> 
+            <span>
+                <strong>Discount  Percentage: </strong><br>
+                {{product.discount_percentage}}
+            </span>
+            <span>
+                <strong>Rating: </strong><br>
+                {{product.rating}}
+            </span>
+            <span>
+                <strong>Stock: </strong><br>
+                {{product.stock}}
+            </span>
+            <span>
+                <strong>Brand: </strong><br>
+                {{product.brand}}
+            </span>
+            <span>
+                <strong>Category: </strong><br>
+                {{product.category}}
+            </span>
+        </div>
+    </body>
+    <section class="container-carousel">
+        <ng-image-slider [images]="img_collection" #nav></ng-image-slider>
+    </section>
+    <nav class="container-navigation">
+        <button class="button" (click)="redirect_product_list()">Product List</button>
+        <button class="button">Buy</button>
+        <button class="button" (click)="add_cart_product()">Add</button>
+        <app-content-shopping-cart class="shopping-cart"></app-content-shopping-cart>
+    </nav>
+</main>

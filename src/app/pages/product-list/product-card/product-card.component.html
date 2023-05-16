@@ -1,0 +1,21 @@
+<li class="product">
+    <div class="container-img">
+        <img [src]="product.thumbnail" alt="Product Image">
+    </div>
+    <div class="container-details">
+        <h3 class="title-primary" *ngIf="get_type_title(product.stock)=='primary'">{{product.title}}</h3>
+        <h3 class="title-secondary" *ngIf="get_type_title(product.stock)=='secondary'">{{product.title}}</h3>
+        <h3 class="title-tertiary" *ngIf="get_type_title(product.stock)=='tertiary'">{{product.title}}</h3>
+        <p class="description">{{product.description}}</p>
+        <span class="stock-1">Stock: </span>
+        <span class="stock-2">{{product.stock}}</span>
+        <span class="price-1">Price: </span>
+        <span class="price-2">{{product.price}}$</span>
+    </div>
+    <div class="container-buy">
+        <button class="buttons-buy" (click)="set_amount(1); $event.stopPropagation()">+</button>
+        <span class="detail-buy">{{amount}}</span>
+        <button class="buttons-buy" (click)="set_amount(-1); $event.stopPropagation()">-</button>
+        <button class="buttons-add" (click)="triggerCustomEvent(); $event.stopPropagation()">Add</button>
+    </div>
+</li>
