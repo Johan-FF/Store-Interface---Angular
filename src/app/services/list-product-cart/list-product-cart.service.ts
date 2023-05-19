@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { findIndex } from 'rxjs/operators';
 import { SingularProduct } from 'src/app/models/singular-product.interface';
 import { DummyRestAPIService } from '../http/dummy-rest-api.service';
 
@@ -31,6 +32,12 @@ export class ListProductCartService {
         }
         this.cart_products.push(new_product)
       })
+    } else {
+      const productIndex = this.cart_products.findIndex(product => product.id === id);
+      if (productIndex !== -1) {
+        this.cart_products[productIndex].amount += 1
+        this.cart_products[productIndex].total = this.cart_products[productIndex].amount*parseInt(this.cart_products[productIndex].price.valueOf())
+      }
     }
   }
 

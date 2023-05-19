@@ -7,14 +7,19 @@
         </div>
         <h1 class="header-title">Product List</h1>
     </header>
-    <body class="slider">
-        <button (click)="change_active_page(-1)" class="button-prev"><</button>
-        <ul class="container-products">
-            <ng-container *ngFor="let product of products">
-                <app-product-card (customEvent)="add_product_to_cart(product.id.valueOf(), $event)" [product]="product" (click)="redirect_product_with_id(product.id.valueOf())">
-                </app-product-card>
-            </ng-container>
-        </ul>
-        <button (click)="change_active_page(1)" class="button-next">></button>
+    <body>
+        <section class="container-search">
+            <app-search class="search"></app-search>
+        </section>
+        <section class="slider">
+            <button (click)="change_active_page(-1)" class="button-prev"><</button>
+            <ul class="container-products">
+                <ng-container *ngFor="let product of products">
+                    <app-product-card (customEvent)="add_product_to_cart(product.id.valueOf(), $event)" [product]="product" (click)="redirect_product_with_id(product.id.valueOf())">
+                    </app-product-card>
+                </ng-container>
+            </ul>
+            <button (click)="change_active_page(1)" class="button-next">></button>
+        </section>
     </body>
 </main>

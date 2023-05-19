@@ -13,6 +13,8 @@ import { ContentProductComponent } from './pages/product/content-product/content
 import { ContentShoppingCartComponent } from './components/shopping-cart/content-shopping-cart/content-shopping-cart.component';
 import { ProductDetailComponent } from './components/shopping-cart/product-detail/product-detail.component';
 import { ProductCardComponent } from './pages/product-list/product-card/product-card.component';
+import { SearchComponent } from './pages/product-list/search/search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,15 @@ import { ProductCardComponent } from './pages/product-list/product-card/product-
     ContentProductComponent,
     ContentShoppingCartComponent,
     ProductDetailComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgImageSliderModule
   ],
   providers: [
